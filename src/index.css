@@ -16,3 +16,7 @@
   background-color: #000;
 } 
 
+.dark .mobile-menu a.active {
+  background-color: #6a7282;
+  color: #fff;
+}
