@@ -1,0 +1,17 @@
+{
+    "navbar": {
+        "menu": "Menu",
+        "home": "Home",
+        "about": "About",
+        "blog": "Blog",
+        "project": "Project",
+        "contact": "Contact"
+    },
+    "header": {
+        "mode": {
+            "light": "Light Mode",
+            "dark": "Dark Mode"
+        },
+        "language": "Language"
+    }
+}

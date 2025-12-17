@@ -1,0 +1,17 @@
+{
+    "navbar": {
+        "menu": "Menu",
+        "home": "Trang chủ",
+        "about": "Giới thiệu",
+        "blog": "Bài viết",
+        "project": "Dự án",
+        "contact": "Liên hệ"
+    },
+    "header": {
+        "mode": {
+            "light": "Chế độ sáng",
+            "dark": "Chế độ tối"
+        },
+        "language": "Ngôn ngữ"
+    }
+}

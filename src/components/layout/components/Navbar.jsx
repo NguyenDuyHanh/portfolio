@@ -1,7 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { t } = useTranslation();
 
   const base = "text-base py-1 px-2.5 cursor-pointer rounded-full transition-colors duration-500 ease-in-out";
   return (
@@ -10,31 +11,31 @@ const Navbar = () => {
         to="/"
         className={base}
       >
-        Home
+        {t('navbar.home')}
       </NavLink>
       <NavLink
         to="/about"
         className={base}
       >
-        About
+         {t('navbar.about')}
       </NavLink>
       <NavLink
         to="/blog"
         className={base}
       >
-        Blog
+        {t('navbar.blog')}
       </NavLink>
       <NavLink
         to="/project"
         className={base}
       >
-        Project
+        {t('navbar.project')}
       </NavLink>
       <NavLink
         to="/contact"
         className={base}
       >
-        Contact
+        {t('navbar.contact')}
       </NavLink>
     </div>
   );

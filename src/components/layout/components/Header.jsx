@@ -1,4 +1,7 @@
 import { useState } from "react";
+import * as React from "react";
+import { useTranslation } from "react-i18next";
+import i18n from "../../../i18n";
 import { observer } from "mobx-react-lite";
 import { NavLink } from "react-router-dom";
 import { Tooltip } from "@mui/material";
@@ -8,11 +11,30 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 import Navbar from "./Navbar";
 import themeStore from "../../../stores/themeStore";
 
 const Header = observer(() => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleChangeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setAnchorEl(null);
+  }
+
+  const { t } = useTranslation();
+
   const [visibleMenu, setVisibleMenu] = useState(false);
 
   return (
@@ -27,7 +49,11 @@ const Header = observer(() => {
         <Navbar />
         <div className="flex gap-4">
           <Tooltip
-            title={themeStore.theme === "light" ? "Dark Mode" : "Light Mode"}
+            title={
+              themeStore.theme === "light"
+                ? t("header.mode.dark")
+                : t("header.mode.light")
+            }
           >
             <IconButton onClick={() => themeStore.toggleTheme()}>
               {themeStore.theme === "light" ? (
@@ -38,16 +64,43 @@ const Header = observer(() => {
             </IconButton>
           </Tooltip>
 
-          <Tooltip title="Language">
-            <IconButton>
+          <Tooltip title="Language" placement="right">
+            <IconButton
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+            >
               <TranslateIcon fontSize="small" sx={{ color: "#2769c5" }} />
             </IconButton>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              slotProps={{
+                list: {
+                  "aria-labelledby": "basic-button",
+                },
+              }}
+            >
+              <MenuItem onClick={() => handleChangeLanguage("vn")}>
+                <span className="fi fi-vn mr-2"></span>Tiếng Việt
+              </MenuItem>
+              <MenuItem onClick={() => handleChangeLanguage("en")}>
+                <span className="fi fi-us mr-2"></span>English
+              </MenuItem>
+            </Menu>
           </Tooltip>
           <IconButton
             className="block md:hidden!"
             onClick={() => setVisibleMenu(true)}
           >
-            <MenuIcon fontSize="medium" className="text-black dark:text-white"/>
+            <MenuIcon
+              fontSize="medium"
+              className="text-black dark:text-white"
+            />
           </IconButton>
         </div>
       </div>
@@ -62,7 +115,10 @@ const Header = observer(() => {
           <div className="flex items-center justify-between p-2 border-b border-gray-300">
             <h2 className="text-black dark:text-white">Menu</h2>
             <IconButton onClick={() => setVisibleMenu(false)}>
-              <CloseIcon fontSize="medium" className="text-black dark:text-white" />
+              <CloseIcon
+                fontSize="medium"
+                className="text-black dark:text-white"
+              />
             </IconButton>
           </div>
           <NavLink
@@ -70,35 +126,35 @@ const Header = observer(() => {
             to="/"
             className="py-3 px-5 text-base border-b border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500"
           >
-            Home
+             {t('navbar.home')}
           </NavLink>
           <NavLink
             onClick={() => setVisibleMenu(false)}
             to="/about"
             className="py-3 px-5 text-base border-b border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500"
           >
-            About
+            {t('navbar.about')}
           </NavLink>
           <NavLink
             onClick={() => setVisibleMenu(false)}
             to="/blog"
             className="py-3 px-5 text-base border-b border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500"
           >
-            Blog
+            {t('navbar.blog')}
           </NavLink>
           <NavLink
             onClick={() => setVisibleMenu(false)}
             to="/project"
             className="py-3 px-5 text-base border-b border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500"
           >
-            Project
+            {t('navbar.project')}
           </NavLink>
           <NavLink
             onClick={() => setVisibleMenu(false)}
             to="/contact"
             className="py-3 px-5 text-base border-b border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500"
           >
-            Contact
+            {t('navbar.contact')}
           </NavLink>
         </div>
       </div>
