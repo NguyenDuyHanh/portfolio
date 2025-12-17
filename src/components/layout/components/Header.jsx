@@ -10,7 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 import Navbar from "./Navbar";
-import themeStore from "../stores/themeStore";
+import themeStore from "../../../stores/themeStore";
 
 const Header = observer(() => {
   const [visibleMenu, setVisibleMenu] = useState(false);
