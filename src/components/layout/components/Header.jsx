@@ -41,7 +41,7 @@ const Header = observer(() => {
     <>
       {/* Header */}
       <div
-        className={`flex justify-between items-center fixed top-0 right-0 left-0 z-50 h-(--height--header) bg-white text-black dark:bg-black dark:text-white px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] shadow-md`}
+        className={`flex justify-between items-center fixed top-0 right-0 left-0 z-50 h-(--height--header) bg-white text-black dark:bg-[#292929] dark:text-white px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] shadow-md`}
       >
         <NavLink to="/" className="text-xl font-semibold">
           NguyenDuyHanh.Dev
@@ -64,7 +64,7 @@ const Header = observer(() => {
             </IconButton>
           </Tooltip>
 
-          <Tooltip title="Language" placement="right">
+          <Tooltip title={t("header.language")} placement="right">
             <IconButton
               id="basic-button"
               aria-controls={open ? "basic-menu" : undefined}
@@ -85,7 +85,7 @@ const Header = observer(() => {
                 },
               }}
             >
-              <MenuItem onClick={() => handleChangeLanguage("vn")}>
+              <MenuItem onClick={() => handleChangeLanguage("vi")}>
                 <span className="fi fi-vn mr-2"></span>Tiếng Việt
               </MenuItem>
               <MenuItem onClick={() => handleChangeLanguage("en")}>

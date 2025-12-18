@@ -24,9 +24,10 @@ i18n
     backend: {
       loadPath: "/locales/{{lng}}/translation.json",
     },
-    lng: 'vn',
-    fallbackLng: 'vn',
-    debug: true,
+    preload: ["vi", "en"],
+    lng: 'en',
+    fallbackLng: 'en',
+    debug: import.meta.env.DEV && false,
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

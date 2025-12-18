@@ -1,4 +1,7 @@
 {
+    "welcome": {
+        "greeting": "Chào mừng đến với trang web của tôi!"
+    },
     "navbar": {
         "menu": "Menu",
         "home": "Trang chủ",

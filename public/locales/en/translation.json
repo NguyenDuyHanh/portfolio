@@ -1,4 +1,7 @@
 {
+    "welcome": {
+        "greeting": "Welcome to my portfolio website!"
+    },
     "navbar": {
         "menu": "Menu",
         "home": "Home",

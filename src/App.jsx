@@ -1,15 +1,24 @@
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 import HomePage from "./pages/HomePage.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import About from "./pages/About.jsx";
 import Blog from "./pages/Blog.jsx";
 import Project from "./pages/Project.jsx";
-import Contact from "./pages/Contact.jsx"; 
+import Contact from "./pages/Contact.jsx";
 import Layout from "./components/layout/Layout.jsx";
+import Welcome from "./pages/Welcome.jsx";
 
 function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
+
   return (
+    <>
+      {/* Welcome overlay */}
+      {showWelcome && (
+        <Welcome visible={showWelcome} onFinish={() => setShowWelcome(false)} />
+      )}
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -20,6 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
+    </>
   );
 }
 
