@@ -16,5 +16,10 @@
             "dark": "Chế độ tối"
         },
         "language": "Ngôn ngữ"
+    },
+    "hero": {
+        "description": "Mình là Nguyễn Duy Hanh, sinh viên ngành Công nghệ Thông tin, có niềm đam mê với lập trình, thiết kế giao diện và khám phá những công nghệ mới. Website này là nơi mình lưu lại các dự án, bài viết và hành trình học tập của bản thân",
+        "welcome": "Chào mừng đến với trang web của NguyenDuyHanh.Dev!",
+        "showcase": "Trưng bày"
     }
 }

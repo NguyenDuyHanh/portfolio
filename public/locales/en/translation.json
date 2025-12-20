@@ -16,5 +16,10 @@
             "dark": "Dark Mode"
         },
         "language": "Language"
+    },
+    "hero": {
+        "description": "I am Nguyen Duy Hanh, an Information Technology student with a passion for programming, UI design, and exploring new technologies. This website is where I showcase my projects, articles, and my learning journey.",
+        "welcome": "Welcome to the website of NguyenDuyHanh.Dev",
+        "showcase": "Showcase"
     }
 }

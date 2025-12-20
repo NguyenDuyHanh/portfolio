@@ -4,12 +4,14 @@
 
 :root {
   --height--header: 64px;
-}
+  --bg-dark: #0f1316;
+  --bg-light: #FFFFFF;
+  --text-primary-light: #000000;
+  --text-secondary-light: #4B5563;
 
-/* .nav-bar a.active {
-  background-color: #000;
-  color: #fff;
-} */
+  --text-primary-dark: #EDEDED;
+  --text-secondary-dark: #7D7D7D;
+}
 
 .mobile-menu a.active {
   color: #fff;
