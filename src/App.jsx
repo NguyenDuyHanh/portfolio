@@ -9,6 +9,8 @@ import Project from "./pages/Project.jsx";
 import Contact from "./pages/Contact.jsx";
 import Layout from "./components/layout/Layout.jsx";
 import Welcome from "./pages/Welcome.jsx";
+import Showcase from "./pages/Showcase.jsx";
+import Resume from "./pages/Resume.jsx";
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -27,6 +29,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/showcase" element={<Showcase />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </Layout>
     </>

@@ -21,5 +21,31 @@
         "description": "Mình là Nguyễn Duy Hanh, sinh viên ngành Công nghệ Thông tin, có niềm đam mê với lập trình, thiết kế giao diện và khám phá những công nghệ mới. Website này là nơi mình lưu lại các dự án, bài viết và hành trình học tập của bản thân",
         "welcome": "Chào mừng đến với trang web của NguyenDuyHanh.Dev!",
         "showcase": "Trưng bày"
+    },
+    "footer": {
+        "rights": "@2025 NguyenDuyHanh.Dev. Đã đăng ký bản quyền.",
+        "professional_summary": {
+            "title": "Full-Stack Web Developer",
+            "description": "Tôi xây dựng các ứng dụng web hiện đại từ frontend đến backend, tập trung vào hiệu năng, trải nghiệm người dùng và khả năng mở rộng. Đam mê công nghệ, không ngừng học hỏi và tối ưu giải pháp thực tế."
+        },
+        "explore": {
+            "title": "Khám phá",
+            "project": "Dự án",
+            "blog": "Bài viết",
+            "about_me": "Về tôi",
+            "showcase": "Trưng bày"
+        },
+        "connect": {
+            "title": "Kết nối",
+            "contact": "Liên hệ",
+            "resume": "Hồ sơ",
+            "email": "Email"
+        },
+        "copyright": {
+            "reserved": "Bản quyền thuộc về",
+            "distributed": "Phân phối bởi"
+        }
+
     }
+
 }

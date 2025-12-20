@@ -41,7 +41,7 @@ const Header = observer(() => {
     <>
       {/* Header */}
       <div
-        className={`flex justify-between items-center fixed top-0 right-0 left-0 z-50 h-(--height--header) bg-white text-(--text-primary-light) dark:bg-(--bg-dark) dark:text-(--text-primary-dark) px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-b-[0.5px] border-gray-300 dark:border-[#292929]`}
+        className={`flex justify-between items-center fixed top-0 right-0 left-0 z-50 h-(--height--header) bg-white text-(--text-primary-light) dark:bg-(--bg-dark) dark:text-(--text-primary-dark) px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-b-[0.5px] border-(--border-color-light) dark:border-(--border-color-dark)`}
       >
         <NavLink to="/" className="text-xl font-semibold">
           NguyenDuyHanh.Dev
@@ -79,11 +79,7 @@ const Header = observer(() => {
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}
-              slotProps={{
-                list: {
-                  "aria-labelledby": "basic-button",
-                },
-              }}
+              disableScrollLock={true}
             >
               <MenuItem onClick={() => handleChangeLanguage("vi")}>
                 <span className="fi fi-vn mr-2"></span>Tiếng Việt

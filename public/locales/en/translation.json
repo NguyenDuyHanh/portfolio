@@ -21,5 +21,29 @@
         "description": "I am Nguyen Duy Hanh, an Information Technology student with a passion for programming, UI design, and exploring new technologies. This website is where I showcase my projects, articles, and my learning journey.",
         "welcome": "Welcome to the website of NguyenDuyHanh.Dev",
         "showcase": "Showcase"
+    },
+    "footer": {
+        "rights": "@2025 NguyenDuyHanh.Dev. All rights reserved.",
+        "professional_summary": {
+            "title": "Full-Stack Web Developer",
+            "description": "I build modern web applications from frontend to backend, focusing on performance, user experience, and scalability. I am passionate about technology, constantly learning, and optimizing practical solutions."
+        },
+        "explore": {
+            "title": "Explore",
+            "project": "Project",
+            "blog": "Blog",
+            "about_me": "About Me",
+            "showcase": "Showcase"
+        },
+        "connect": {
+            "title": "Connect",
+            "contact": "Contact",
+            "resume": "Resume",
+            "email": "Email"
+        },
+        "copyright": {
+            "reserved": "All Rights Reserved by",
+            "distributed": "Distributed By"
+        }
     }
 }

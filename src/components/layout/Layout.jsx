@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <div className="">
       <Header />
       <main
-        className="dark:bg-(--bg-dark) py-(--height--header)"
+        className="dark:bg-(--bg-dark) py-(--height--header) px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]"
       >
         {children}
       </main>

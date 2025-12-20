@@ -4,14 +4,15 @@ import { useMemo } from "react";
 import themeStore from "../stores/themeStore";
 
 const MuiThemeProvider = observer(({ children }) => {
+  const mode = themeStore.theme;
   const theme = useMemo(
     () =>
       createTheme({
         palette: {
-          mode: themeStore.theme, // "light" | "dark"
+          mode: mode,
         },
       }),
-    [themeStore.theme]
+    [mode]
   );
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;

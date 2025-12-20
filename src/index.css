@@ -11,6 +11,9 @@
 
   --text-primary-dark: #EDEDED;
   --text-secondary-dark: #7D7D7D;
+
+  --border-color-light: #D1D5DB;
+  --border-color-dark: #292929;
 }
 
 .mobile-menu a.active {
