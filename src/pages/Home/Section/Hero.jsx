@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import Social from "./Social";
 
-import Button from "./button/Button";
+import Social from "../../../components/Social";
+import Button from "../../../components/Button/Button.jsx";
 
 const Hero = () => {
 
