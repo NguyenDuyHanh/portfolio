@@ -5,7 +5,12 @@
 :root {
   --height--header: 64px;
   --bg-dark: #0f1316;
+  --bg-secondary-dark: #4B5563;
   --bg-light: #FFFFFF;
+
+  --bg-card-light: #f7f7f7;
+  --bg-card-dark: #151a1e;
+
   --text-primary-light: #000000;
   --text-secondary-light: #4B5563;
 
