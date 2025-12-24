@@ -21,7 +21,7 @@ const BlogCard = ({ imageSrc, to, date, title, minRead, content, tags }) => {
         <h3 className="text-2xl font-semibold text-(--text-primary-light) dark:text-(--text-primary-dark)">
           {title}
         </h3>
-        <p className="text-base font-medium text-(--text-primary-light) dark:text-(--text-primary-dark) line-clamp-3">
+        <p className="text-base font-medium text-(--text-secondary-light) dark:text-(--text-secondary-dark) line-clamp-3">
           {content}
         </p>
       </div>

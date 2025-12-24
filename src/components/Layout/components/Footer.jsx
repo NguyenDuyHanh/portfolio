@@ -30,10 +30,10 @@ const Footer = () => {
               {t("footer.explore.title")}
             </p>
             <div className="flex flex-col gap-4 text-lg text-(--text-secondary-light) dark:text-(--text-secondary-dark) mt-5 cursor-pointer">
-              <NavLink to="/project">{t("footer.explore.project")}</NavLink>
-              <NavLink to="/blog">{t("footer.explore.blog")}</NavLink>
-              <NavLink to="/about">{t("footer.explore.about_me")}</NavLink>
-              <NavLink to="/showcase">{t("footer.explore.showcase")}</NavLink>
+              <NavLink className="hover:text-(--text-primary-light) dark:hover:text-(--text-primary-dark)" to="/project">{t("footer.explore.project")}</NavLink>
+              <NavLink className="hover:text-(--text-primary-light) dark:hover:text-(--text-primary-dark)" to="/blog">{t("footer.explore.blog")}</NavLink>
+              <NavLink className="hover:text-(--text-primary-light) dark:hover:text-(--text-primary-dark)" to="/about">{t("footer.explore.about_me")}</NavLink>
+              <NavLink className="hover:text-(--text-primary-light) dark:hover:text-(--text-primary-dark)" to="/showcase">{t("footer.explore.showcase")}</NavLink>
             </div>
           </div>
           <div>
@@ -41,9 +41,9 @@ const Footer = () => {
               {t("footer.connect.title")}
             </p>
             <div className="flex flex-col gap-4 text-lg text-(--text-secondary-light) dark:text-(--text-secondary-dark) mt-5 cursor-pointer">
-              <NavLink to="/contact">{t("footer.connect.contact")}</NavLink>
-              <NavLink to="/resume">{t("footer.connect.resume")}</NavLink>
-              <NavLink to="/">{t("footer.connect.email")}</NavLink>
+              <NavLink className="hover:text-(--text-primary-light) dark:hover:text-(--text-primary-dark)" to="/contact">{t("footer.connect.contact")}</NavLink>
+              <NavLink className="hover:text-(--text-primary-light) dark:hover:text-(--text-primary-dark)" to="/resume">{t("footer.connect.resume")}</NavLink>
+              <NavLink className="hover:text-(--text-primary-light) dark:hover:text-(--text-primary-dark)" to="/">{t("footer.connect.email")}</NavLink>
             </div>
           </div>
         </div>
