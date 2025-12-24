@@ -19,6 +19,9 @@
 
   --border-color-light: #D1D5DB;
   --border-color-dark: #292929;
+
+  --border-hover-light: #000000;
+  --border-hover-dark: #EDEDED;
 }
 
 .mobile-menu a.active {

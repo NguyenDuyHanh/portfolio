@@ -1,12 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 import BlogCard from "../../../components/Blog/BlogCard";
 import SectionHeader from "../../../components/Section/SectionHeader";
 
 const RecentBlog = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="mt-10 md:mt-20">
       <SectionHeader
-        title="Recent Blog"
-        actionText="View All"
+        title={t("recentBlogs.title")}
+        actionText={t("recentBlogs.view_all")}
         actionTo="/blog"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">

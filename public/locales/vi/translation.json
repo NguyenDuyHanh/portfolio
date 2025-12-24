@@ -45,7 +45,13 @@
             "reserved": "Bản quyền thuộc về",
             "distributed": "Phân phối bởi"
         }
-
+    },
+    "recentBlogs": {
+        "title": "Bài viết gần đây",
+        "view_all": "Xem tất cả"
+    },
+    "openSource": {
+        "title": "Mã nguồn mở",
+        "view_all": "Xem tất cả"
     }
-
 }

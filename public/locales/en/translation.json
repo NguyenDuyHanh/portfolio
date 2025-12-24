@@ -45,5 +45,13 @@
             "reserved": "All Rights Reserved by",
             "distributed": "Distributed By"
         }
+    },
+    "recentBlogs": {
+        "title": "Recent Blogs",
+        "view_all": "View All"
+    },
+    "openSource": {
+        "title": "Open Source",
+        "view_all": "View All Repositories"
     }
 }

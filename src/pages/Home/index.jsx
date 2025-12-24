@@ -1,5 +1,6 @@
 import Hero from "./Section/Hero"
 import RecentBlog from "./Section/RecentBlog"
+import OpenSource from "./Section/OpenSource"
 import Seo from "../../components/Seo"
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
       />
       <Hero />
       <RecentBlog />
+      <OpenSource />
     </div>
   )
 }
