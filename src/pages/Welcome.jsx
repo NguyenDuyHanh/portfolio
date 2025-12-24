@@ -35,17 +35,17 @@ const Welcome = ({ onFinish, visible }) => {
       className={`
         fixed inset-0 z-9999
         flex flex-col items-center justify-center
-        bg-(--bg-light) dark:bg-(--bg-dark)
+        bg-(--bg-primary)
         transition-opacity duration-700
         ease-in-out
         ${visible && !leaving ? "opacity-100" : "opacity-0 pointer-events-none"}
       `}
     >
       {/* TEXT */}
-      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center text-(--text-primary-light) dark:text-(--text-primary-dark)">
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center text-(--text-primary)">
         Welcome To My
       </h1>
-      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center text-(--text-primary-light) dark:text-(--text-primary-dark)">
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center text-(--text-primary)">
         Portfolio Website
       </h1>
 
@@ -54,14 +54,14 @@ const Welcome = ({ onFinish, visible }) => {
       </span>
 
       {/* PROGRESS BAR */}
-      <div className="w-64 h-4 border border-(--text-primary-light) dark:border-(--text-primary-dark) rounded overflow-hidden">
+      <div className="w-64 h-4 border border-(--text-primary) rounded overflow-hidden">
         <div
-          className="h-full bg-(--bg-dark) dark:bg-(--bg-light) transition-transform duration-100"
+          className="h-full bg-(--text-primary) transition-transform duration-100"
           style={{ width: `${progress}%` }}
         />
       </div>
 
-      <p className="mt-4 text-(--text-secondary-light) dark:text-(--text-secondary-dark) text-xs tracking-widest">
+      <p className="mt-4 text-(--text-secondary) text-xs tracking-widest">
         &gt; INITIALIZING PORTFOLIO...
       </p>
     </div>
