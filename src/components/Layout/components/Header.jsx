@@ -41,7 +41,7 @@ const Header = observer(() => {
     <>
       {/* Header */}
       <div
-        className={`flex justify-between items-center fixed top-0 right-0 left-0 z-50 h-(--height--header) bg-white text-(--text-primary-light) dark:bg-(--bg-dark) dark:text-(--text-primary-dark) px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-b-[0.5px] border-(--border-color-light) dark:border-(--border-color-dark)`}
+        className={`flex justify-between items-center fixed top-0 right-0 left-0 z-50 h-(--height--header) bg-(--bg-primary) text-(--text-primary) border-b-[0.5px] border-(--border-color) px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]`}
       >
         <NavLink to="/" className="text-xl font-semibold">
           NguyenDuyHanh.Dev

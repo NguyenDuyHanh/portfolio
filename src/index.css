@@ -4,25 +4,44 @@
 
 :root {
   --height--header: 64px;
-  --bg-dark: #0f1316;
-  --bg-secondary-dark: #4B5563;
-  --bg-light: #FFFFFF;
 
-  --bg-card-light: #f7f7f7;
-  --bg-card-dark: #151a1e;
+  /* background */
+  --bg-primary: #ffffff;
+  --bg-card: #f7f7f7;
+  --foreground: #00000080;
+  --foreground-hover: #000000;
 
-  --text-primary-light: #000000;
-  --text-secondary-light: #4B5563;
+  /* bg-btn */
+  --bg-btn: #0f1316;
 
-  --text-primary-dark: #EDEDED;
-  --text-secondary-dark: #7D7D7D;
+  /* text */
+  --text-primary: #000000;
+  --text-secondary: #4B5563;
+  --text-btn: #ffffff;
 
-  --border-color-light: #D1D5DB;
-  --border-color-dark: #292929;
-
-  --border-hover-light: #000000;
-  --border-hover-dark: #EDEDED;
+  /* border */
+  --border-color: #D1D5DB;
+  --border-color-hover: #000000;
+  --border-card-hover: #000000;
 }
+
+
+.dark {
+  --bg-primary: #0f1316;
+  --bg-card: #151a1e;
+
+  /* bg-btn */
+  --bg-btn: #ffffff;
+
+  --text-primary: #EDEDED;
+  --text-secondary: #7D7D7D;
+  --text-btn: #000000;
+
+  --border-color: #292929;
+  --border-color-hover: #ffffff;
+  --border-card-hover: #EDEDED;
+}
+
 
 .mobile-menu a.active {
   color: #fff;

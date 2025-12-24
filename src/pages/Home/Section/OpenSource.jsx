@@ -38,7 +38,7 @@ const OpenSource = () => {
 
   return (
     <section className="mt-10 md:mt-30 pt-20">
-      <h2 className="mb-15 md:mb-25 flex items-center justify-center gap-3 text-4xl font-semibold text-(--text-primary-light) dark:text-(--text-primary-dark)">
+      <h2 className="mb-15 md:mb-25 flex items-center justify-center gap-3 text-4xl font-semibold text-(--text-primary)">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -70,9 +70,9 @@ const OpenSource = () => {
           target="_blank"
           className="
             flex items-center gap-2 rounded-lg
-            border border-(--border-color-light) dark:border-(--border-color-dark) px-6 py-3
-            text-base text-(--text-primary-light) dark:text-(--text-primary-dark)
-            bg-(--bg-light) dark:bg-(--bg-dark)
+            border border-(--border-color) px-6 py-3
+            text-base text-(--text-primary)
+            bg-(--bg-primary)
             hover:opacity-80 transition-opacity duration-300
           "
         >
