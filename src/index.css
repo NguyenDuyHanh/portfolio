@@ -7,6 +7,7 @@
 
   /* background */
   --bg-primary: #ffffff;
+  --bg-secondary: #1717171A;
   --bg-card: #f7f7f7;
   --foreground: #00000080;
   --foreground-hover: #000000;
@@ -16,7 +17,7 @@
 
   /* text */
   --text-primary: #000000;
-  --text-secondary: #4B5563;
+  --text-secondary: #999999;
   --text-btn: #ffffff;
 
   /* border */
@@ -27,8 +28,9 @@
 
 
 .dark {
-  --bg-primary: #0f1316;
-  --bg-card: #151a1e;
+  --bg-primary: #0e1215;
+  --bg-secondary: #ffffff1a;
+  --bg-card: #12171d;
 
   /* bg-btn */
   --bg-btn: #ffffff;

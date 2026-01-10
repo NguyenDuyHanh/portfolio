@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="text-center py-6 text-(--text-primary)">
+        <div className="text-center py-6 text-(--text-primary) text-balence">
             <CopyrightIcon />
             2025 - {t("footer.copyright.reserved")} NguyenDuyHanh.Dev -{" "}
             {t("footer.copyright.distributed")} Nguyen Duy Hanh

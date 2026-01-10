@@ -14,9 +14,9 @@ const BlogCard = ({ imageSrc, to, date, title, minRead, content, tags }) => {
       </div>
       <div className="flex flex-col gap-3 pt-5 pb-6 px-4 bg-(--bg-card) rounded-b-2xl">
         <div className="flex gap-3 text-(--text-secondary)">
-          <span className="text-sm text-gray-500">{date}</span>
-          <span className="text-sm text-gray-500">•</span>
-          <span className="text-sm text-gray-500">{minRead} min read</span>
+          <span className="text-sm">{date}</span>
+          <span className="text-sm">•</span>
+          <span className="text-sm">{minRead} min read</span>
         </div>
         <h3 className="text-2xl font-semibold text-(--text-primary)">
           {title}

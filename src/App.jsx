@@ -9,7 +9,7 @@ import Project from "./pages/Project.jsx";
 import Contact from "./pages/Contact.jsx";
 import Layout from "./components/Layout";
 import Welcome from "./pages/Welcome.jsx";
-import Showcase from "./pages/Showcase.jsx";
+import Showcase from "./pages/Showcase";
 import Resume from "./pages/Resume.jsx";
 
 function App() {

@@ -1,6 +1,6 @@
-import Hero from "./Section/Hero"
-import RecentBlog from "./Section/RecentBlog"
-import OpenSource from "./Section/OpenSource"
+import Hero from "./sections/Hero"
+import RecentBlog from "./sections/RecentBlog"
+import OpenSource from "./sections/OpenSource"
 import Seo from "../../components/Seo"
 
 const HomePage = () => {
