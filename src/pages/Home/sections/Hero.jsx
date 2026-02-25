@@ -10,7 +10,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="flex flex-col justify-center items-center gap-2 py-15 md:py-30">
+    <section className="flex flex-col justify-center items-center gap-2 pt-10 py-15 md:pt-5 md:pb-30">
       <h1 className="text-5xl md:text-8xl font-serif font-bold text-(--text-primary) text-center">
         Hanh Nguyễn
       </h1>
