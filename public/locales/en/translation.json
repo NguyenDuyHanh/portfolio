@@ -6,8 +6,11 @@
         "menu": "Menu",
         "home": "Home",
         "about": "About",
+        "experience": "Experience",
         "blog": "Blog",
         "project": "Project",
+        "skill": "Skill",
+        "skills": "Skills",
         "contact": "Contact"
     },
     "header": {

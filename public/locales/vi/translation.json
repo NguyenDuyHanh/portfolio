@@ -6,8 +6,11 @@
         "menu": "Menu",
         "home": "Trang chủ",
         "about": "Giới thiệu",
+        "experience": "Kinh nghiệm",
         "blog": "Bài viết",
         "project": "Dự án",
+        "skill": "Kỹ năng",
+        "skills": "Kỹ năng",
         "contact": "Liên hệ"
     },
     "header": {
