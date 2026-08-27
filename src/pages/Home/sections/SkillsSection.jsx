@@ -1,21 +1,33 @@
 import { useState } from "react";
-import { Code2, Database, Layout, Smartphone, Wrench } from "lucide-react";
+import {
+  SiReact,
+  SiJavascript,
+  SiTailwindcss,
+  SiHtml5,
+  SiNodedotjs,
+  SiMongodb,
+  SiMysql,
+  SiGit,
+  SiDocker,
+  SiVite,
+} from "react-icons/si";
+import { TbApi, TbBrandReactNative } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal, activePillTransition, smoothEase } from "../../../animations";
 
 const skillsData = [
-  { name: "React.js / Next.js", percentage: 85, category: "frontend", icon: Layout },
-  { name: "JavaScript / ES6+", percentage: 90, category: "frontend", icon: Code2 },
-  { name: "Tailwind CSS & CSS3", percentage: 92, category: "frontend", icon: Layout },
-  { name: "HTML5 & Semantic UI", percentage: 95, category: "frontend", icon: Layout },
-  { name: "Node.js & Express.js", percentage: 80, category: "backend", icon: Database },
-  { name: "MongoDB & Mongoose", percentage: 78, category: "backend", icon: Database },
-  { name: "MySQL & Relational DB", percentage: 75, category: "backend", icon: Database },
-  { name: "RESTful API & WebSocket", percentage: 85, category: "backend", icon: Database },
-  { name: "React Native", percentage: 70, category: "mobile", icon: Smartphone },
-  { name: "Git / GitHub / CI/CD", percentage: 88, category: "tools", icon: Wrench },
-  { name: "Docker & VPS Deploy", percentage: 75, category: "tools", icon: Wrench },
-  { name: "Vite / Webpack", percentage: 82, category: "tools", icon: Wrench },
+  { name: "React.js / Next.js", category: "frontend", icon: SiReact, color: "#61DAFB" },
+  { name: "JavaScript / ES6+", category: "frontend", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "Tailwind CSS & CSS3", category: "frontend", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "HTML5 & Semantic UI", category: "frontend", icon: SiHtml5, color: "#E34F26" },
+  { name: "Node.js & Express.js", category: "backend", icon: SiNodedotjs, color: "#5FA04E" },
+  { name: "MongoDB & Mongoose", category: "backend", icon: SiMongodb, color: "#47A248" },
+  { name: "MySQL & Relational DB", category: "backend", icon: SiMysql, color: "#4479A1" },
+  { name: "RESTful API & WebSocket", category: "backend", icon: TbApi, color: "#009688" },
+  { name: "React Native", category: "mobile", icon: TbBrandReactNative, color: "#61DAFB" },
+  { name: "Git / GitHub / CI/CD", category: "tools", icon: SiGit, color: "#F05032" },
+  { name: "Docker & VPS Deploy", category: "tools", icon: SiDocker, color: "#2496ED" },
+  { name: "Vite / Webpack", category: "tools", icon: SiVite, color: "#646CFF" },
 ];
 
 const categories = [
@@ -91,32 +103,14 @@ const SkillsSection = () => {
                   viewport={{ once: true, margin: "-40px" }}
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.6, ease: smoothEase, delay: (index % 3) * 0.1 }}
-                  className="p-5 rounded-2xl border border-border bg-card text-card-foreground shadow-sm hover:border-border-hover transition-colors"
+                  className="p-5 rounded-2xl border border-border bg-card text-card-foreground shadow-sm hover:border-border-hover transition-colors flex items-center gap-4"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2.5 rounded-xl bg-muted text-foreground">
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <span className="font-bold text-sm text-foreground">
-                        {skill.name}
-                      </span>
-                    </div>
-                    <span className="text-xs font-extrabold text-muted-foreground">
-                      {skill.percentage}%
-                    </span>
+                  <div className="p-3 rounded-xl bg-muted flex items-center justify-center shrink-0">
+                    <Icon className="w-6 h-6" style={{ color: skill.color }} />
                   </div>
-
-                  {/* Animated Progress Bar */}
-                  <div className="w-full h-2.5 bg-muted rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-primary rounded-full"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.percentage}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, ease: "easeOut" }}
-                    />
-                  </div>
+                  <span className="font-bold text-sm text-foreground">
+                    {skill.name}
+                  </span>
                 </motion.div>
               );
             })}
