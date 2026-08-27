@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { FacebookIcon, InstagramIcon, GithubIcon } from "../../../components/icons/SocialIcons";
+import { FaGithub, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { ScrollReveal, StaggerContainer, StaggerItem, buttonHoverProps } from "../../../animations";
 
 const socialLinks = [
@@ -9,22 +9,33 @@ const socialLinks = [
     name: "GitHub",
     handle: "@NguyenDuyHanh",
     url: "https://github.com/NguyenDuyHanh",
-    icon: GithubIcon,
-    color: "hover:border-gray-900 dark:hover:border-gray-100",
+    icon: FaGithub,
+    color: "text-foreground",
+    hoverBorder: "hover:border-border-hover",
   },
   {
     name: "Facebook",
     handle: "@NguyenDuyHanh",
     url: "https://www.facebook.com/share/1ASxDcgsKX/?mibextid=wwXIfr",
-    icon: FacebookIcon,
-    color: "hover:border-blue-600",
+    icon: FaFacebook,
+    color: "text-[#1877F2]",
+    hoverBorder: "hover:border-[#1877F2]",
   },
   {
     name: "Instagram",
     handle: "@_ndh_204",
     url: "https://www.instagram.com/_ndh_204?igsh=djBxbGNoajl5ejJo&utm_source=qr",
-    icon: InstagramIcon,
-    color: "hover:border-pink-500",
+    icon: FaInstagram,
+    color: "text-[#E4405F]",
+    hoverBorder: "hover:border-[#E4405F]",
+  },
+  {
+    name: "LinkedIn",
+    handle: "@NguyenDuyHanh",
+    url: "https://www.linkedin.com/in/hanh-nguy%E1%BB%85n-21781733b/",
+    icon: FaLinkedin,
+    color: "text-[#0A66C2]",
+    hoverBorder: "hover:border-[#0A66C2]",
   },
 ];
 
@@ -74,10 +85,10 @@ const ContactSection = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-4 rounded-2xl border border-border bg-muted/50 flex items-center gap-4 transition-all duration-300 ${social.color}`}
+                      className={`p-4 rounded-2xl border border-border bg-muted/50 flex items-center gap-4 transition-all duration-300 ${social.hoverBorder}`}
                     >
-                      <div className="p-2.5 rounded-xl bg-card text-foreground shadow-xs">
-                        <Icon className="w-5 h-5" />
+                      <div className="p-2.5 rounded-xl bg-card shadow-xs flex items-center justify-center shrink-0">
+                        <Icon className={`w-5 h-5 ${social.color}`} />
                       </div>
                       <div className="overflow-hidden">
                         <span className="block text-sm font-bold text-foreground truncate">

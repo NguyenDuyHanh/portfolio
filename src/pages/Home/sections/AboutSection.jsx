@@ -27,7 +27,7 @@ const infoCards = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+84 981 460 071",
+    value: "+84 332 225 159",
   },
   {
     icon: Briefcase,

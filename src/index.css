@@ -21,7 +21,7 @@
   --accent: rgba(23, 23, 23, 0.1);
   --accent-foreground: #000000;
   --border: #D1D5DB;
-  --border-hover: #000000;
+  --border-hover: #888888;
   --input: #D1D5DB;
   --ring: #000000;
 
@@ -55,7 +55,7 @@
   --accent: rgba(255, 255, 255, 0.1);
   --accent-foreground: #EDEDED;
   --border: #292929;
-  --border-hover: #ffffff;
+  --border-hover: #4B5563;
   --input: #292929;
   --ring: #ffffff;
 
