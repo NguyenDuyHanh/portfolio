@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import FrontHandIcon from '@mui/icons-material/FrontHand';
+import { Hand } from "lucide-react";
 
 const Welcome = ({ onFinish, visible }) => {
   const [progress, setProgress] = useState(0);
@@ -35,33 +35,33 @@ const Welcome = ({ onFinish, visible }) => {
       className={`
         fixed inset-0 z-9999
         flex flex-col items-center justify-center
-        bg-(--bg-primary)
+        bg-background
         transition-opacity duration-700
         ease-in-out
         ${visible && !leaving ? "opacity-100" : "opacity-0 pointer-events-none"}
       `}
     >
       {/* TEXT */}
-      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center text-(--text-primary)">
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center text-foreground">
         Welcome To My
       </h1>
-      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center text-(--text-primary)">
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center text-foreground">
         Portfolio Website
       </h1>
 
       <span className="hand-wave mb-6">
-        <FrontHandIcon fontSize="large" className="rotate-315 text-yellow-300" />
+        <Hand className="w-10 h-10 -rotate-45 text-yellow-300 fill-yellow-300" />
       </span>
 
       {/* PROGRESS BAR */}
-      <div className="w-64 h-4 border border-(--text-primary) rounded overflow-hidden">
+      <div className="w-64 h-4 border border-foreground rounded overflow-hidden">
         <div
-          className="h-full bg-(--text-primary) transition-transform duration-100"
+          className="h-full bg-foreground transition-transform duration-100"
           style={{ width: `${progress}%` }}
         />
       </div>
 
-      <p className="mt-4 text-(--text-secondary) text-xs tracking-widest">
+      <p className="mt-4 text-muted-foreground text-xs tracking-widest">
         &gt; INITIALIZING PORTFOLIO...
       </p>
     </div>

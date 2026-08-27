@@ -5,14 +5,11 @@ import "./index.css";
 import "flag-icons/css/flag-icons.min.css";
 import App from "./App.jsx";
 import "./i18n";
-import MuiThemeProvider from "./providers/MuiThemeProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
-    <MuiThemeProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </MuiThemeProvider>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
   // </StrictMode>
 );

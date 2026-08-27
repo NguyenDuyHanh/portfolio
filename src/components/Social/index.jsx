@@ -1,48 +1,63 @@
-import { Tooltip } from "@mui/material";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
-import { IconButton } from "@mui/material";
+import { FileText } from "lucide-react";
 import { NavLink } from "react-router-dom";
+
+import { Tooltip } from "../ui/tooltip";
+import { Button } from "../ui/button";
+import { FacebookIcon, InstagramIcon, GithubIcon } from "../icons/SocialIcons";
 
 const Social = () => {
   return (
-    <div className="social flex gap-4">
+    <div className="social flex gap-4 items-center">
       <Tooltip title="Facebook">
-        <IconButton
-          href="https://www.facebook.com/share/1ASxDcgsKX/?mibextid=wwXIfr"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button
+          variant="icon"
+          asChild
+          className="h-10 w-10 p-2 hover:text-blue-600 transition-colors"
         >
-          <FacebookOutlinedIcon fontSize="large" />
-        </IconButton>
+          <a
+            href="https://www.facebook.com/share/1ASxDcgsKX/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <FacebookIcon className="w-7 h-7" />
+          </a>
+        </Button>
       </Tooltip>
+
       <Tooltip title="Instagram">
-        <IconButton
-          href="https://www.instagram.com/_ndh_204?igsh=djBxbGNoajl5ejJo&utm_source=qr"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button
+          variant="icon"
+          asChild
+          className="h-10 w-10 p-2 hover:text-pink-500 transition-colors"
         >
-          <InstagramIcon fontSize="large" />
-        </IconButton>
+          <a
+            href="https://www.instagram.com/_ndh_204?igsh=djBxbGNoajl5ejJo&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <InstagramIcon className="w-7 h-7" />
+          </a>
+        </Button>
       </Tooltip>
+
       <Tooltip title="GitHub">
-        <IconButton
-          href="https://github.com/NguyenDuyHanh"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button
+          variant="icon"
+          asChild
+          className="h-10 w-10 p-2 hover:text-foreground transition-colors"
         >
-          <GitHubIcon fontSize="large" />
-        </IconButton>
+          <a
+            href="https://github.com/NguyenDuyHanh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <GithubIcon className="w-7 h-7" />
+          </a>
+        </Button>
       </Tooltip>
-      <NavLink to="/resume">
-        <Tooltip title="Resume">
-          <IconButton>
-            <AssignmentIndIcon fontSize="large" />
-          </IconButton>
-        </Tooltip>
-      </NavLink>
     </div>
   );
 };
