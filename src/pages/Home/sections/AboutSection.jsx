@@ -48,7 +48,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="py-20 bg-muted/40">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-12">
             About Me

@@ -1,23 +1,25 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, MapPin, Sparkles, Code2 } from "lucide-react";
+import { ArrowRight, MapPin, Sparkles, Code2, Bot, Brain, Cpu, Wand2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, buttonHoverProps } from "../../../animations";
 
 const roles = [
   "Fullstack Developer",
   "Frontend Engineer",
-  "React & Node.js Specialist",
+  "AI-Assisted Dev Specialist",
   "Software Engineer",
 ];
 
-const HeroSection = () => {
+const HeroSection = ({ isWelcomeActive = false }) => {
   const { t } = useTranslation();
   const [roleIndex, setRoleIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    if (isWelcomeActive) return; // Wait until Welcome screen finishes
+
     const fullText = roles[roleIndex];
     let typingSpeed = isDeleting ? 50 : 100;
 
@@ -40,7 +42,7 @@ const HeroSection = () => {
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [currentText, isDeleting, roleIndex]);
+  }, [isWelcomeActive, currentText, isDeleting, roleIndex]);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -51,12 +53,12 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden relative">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 max-w-6xl mx-auto px-6">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 max-w-6xl mx-auto px-4 sm:px-6">
         {/* Left Intro Column with Staggered Entrance */}
         <motion.div
           className="flex-1 text-center md:text-left"
           initial="hidden"
-          animate="visible"
+          animate={isWelcomeActive ? "hidden" : "visible"}
           variants={staggerContainer}
         >
           <motion.h1
@@ -122,8 +124,8 @@ const HeroSection = () => {
         <motion.div
           className="flex-shrink-0 relative"
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+          animate={isWelcomeActive ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100, delay: 0.2 }}
         >
           {/* Continuous Up & Down Floating Container */}
           <motion.div
@@ -165,8 +167,8 @@ const HeroSection = () => {
               transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 1 }}
               className="absolute -bottom-2 -left-4 px-3.5 py-1.5 rounded-full bg-card border border-border text-foreground text-xs font-bold shadow-lg flex items-center gap-1.5"
             >
-              <Code2 className="w-3.5 h-3.5 text-primary" />
-              <span>React & Node.js</span>
+              <Bot className="w-3.5 h-3.5 text-purple-500 dark:text-purple-400" />
+              <span>AI-Assisted Dev</span>
             </motion.div>
           </motion.div>
         </motion.div>
