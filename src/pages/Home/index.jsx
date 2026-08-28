@@ -7,7 +7,7 @@ import SkillsSection from "./sections/SkillsSection";
 import ContactSection from "./sections/ContactSection";
 import FooterSection from "./sections/FooterSection";
 
-const HomePage = () => {
+const HomePage = ({ isWelcomeActive = false }) => {
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300 font-sans selection:bg-primary selection:text-primary-foreground">
       {/* Floating Pill Navigation */}
@@ -15,7 +15,7 @@ const HomePage = () => {
 
       {/* Main Single Page Content Sections */}
       <main>
-        <HeroSection />
+        <HeroSection isWelcomeActive={isWelcomeActive} />
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />

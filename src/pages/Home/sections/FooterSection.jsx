@@ -11,7 +11,7 @@ const FooterSection = () => {
 
   return (
     <footer className="bg-card text-card-foreground pt-12 pb-4 border-t border-border">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-border">
           {/* Column 1: Brand / Summary */}
           <div>
